@@ -33,7 +33,7 @@
 <div class="education-form">
     <h2>Education</h2>
 
-    <form method="get" action="#" id="education" class="education">
+    <form method="get" action="#" class="education">
 
         <hr>
         <div class="educationTable">
@@ -88,14 +88,70 @@
     
         </div>
 
-        <br/><button onclick="addEducation()" type="submit" id="addEducation"> Add Education</button>
+        <!--<br/><button onclick="addEducation()" type="submit" id="addEducation"> Add Education</button> 
+        Add Education method not thoroughly implemented, using duplicated form segments instead-->
+    </form>
+    <form method="get" action="#" class="education">
+
+        <hr>
+        <div class="educationTable">
+            <table>
+                <tr>
+                    <td><input type="text" name="schoolName" class="school" id="school1" placeholder="School Name" /></td>
+                    <td><input type="text" name="city" id="city1" placeholder="City, State" /></td>
+                    <td><label>Grad Date:</label><input type="date" name="date" id="date1" placeholder="Today" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="degree" id="degree1">
+                            <option>Your Degree...</option>
+                            <option>High School</option>
+                            <option>BA/BS</option>
+                            <option>MS</option>
+                            <option>PhD</option>
+                            <option>MBA</option>
+                            <option>Certificate</option>
+                        </select>
+                    </td>
+                    <td>
+
+                        <select name="major" id="major1">
+                            <option>Your Major...</option>
+                            <option>Accounting</option>
+                            <option>Aerospace Engineering</option>
+                            <option>Anthropology</option><option>Art History</option>
+                            <option>Biochemistry</option><option>Biology</option><option>Business</option>
+                            <option>Chemical Engineering</option><option>Chemistry</option>
+                            <option>Civil Engineering</option><option>Coding School</option>
+                            <option>Cognitive Science</option><option>Communication</option>
+                            <option>Computer Engineering</option><option>Computer Science</option>
+                            <option>Electrical Engineering</option><option>English</option>
+                            <option>Environmental Engineering</option><option>Environmental Science</option>
+                            <option>Finance</option><option>Fine Art</option>
+                            <option>Gender Studies</option><option>Graphic Design</option>
+                            <option>Health and Human Sciences</option><option>History</option>
+                            <option>Industrial Engineering</option><option>Latin American Studies</option>
+                            <option>Linguistics</option><option>Management Engineering</option><option>Marketing</option>
+                            <option>Mathematics</option><option>Mechanical Engineering</option><option>Music</option>
+                            <option>Non-Technical Major</option><option>Philosophy</option><option>Physics</option>
+                            <option>Political Science</option><option>Product Design</option><option>Psychology</option>
+                            <option>Public Relations</option><option>Religious Studies</option><option>Robotics</option>
+                            <option>Sociology</option><option>Software Engineering</option><option>Sports Management</option>
+                            <option>Statistics</option><option>Theatre</option><option>Undeclared</option>
+                            <option>Visual Design</option><option>Writing</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
     </form>
     
 </div>
 <div class="job-form">
     <h2>Job Experience</h2>
 
-    <form method="get" action="#" id="jobForm">
+    <form method="get" action="#" class="jobForm">
 
         <hr>
         <input type="text" name="company" id="company0" placeholder="Company" /> 
@@ -106,8 +162,31 @@
 
         
     </form>
+    <form method="get" action="#" class="jobForm">
+
+        <hr>
+        <input type="text" name="company" id="company1" placeholder="Company" />
+        <input type="text" name="job" id="job1" placeholder="Work Title" /><br/>
+        <label>Date From:</label><input type="date" name="date" id="dateFrom1" placeholder="" />
+        <label>Date To:</label><input type="date" name="date" id="dateTo1" placeholder="Current Job" /><br/>
+        <textarea id="description1" placeholder="Enter a description..."></textarea>
+
+
+    </form>
+    <form method="get" action="#" class="jobForm">
+
+        <hr>
+        <input type="text" name="company" id="company2" placeholder="Company" />
+        <input type="text" name="job" id="job2" placeholder="Work Title" /><br/>
+        <label>Date From:</label><input type="date" name="date" id="dateFrom2" placeholder="" />
+        <label>Date To:</label><input type="date" name="date" id="dateTo2" placeholder="Current Job" /><br/>
+        <textarea id="description2" placeholder="Enter a description..."></textarea>
+
+
+    </form>
     <form method="get" action="#" id="addForm">
-         <br /><button onclick="addJob()" type="button" id="addJob"> Add Job</button>
+         <!--<br /><button onclick="addJob()" type="button" id="addJob"> Add Job</button>
+         Ran out of time to create an add job button to make the site dynamic-->
     </form>
 </div>
 

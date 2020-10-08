@@ -74,6 +74,8 @@ function PhoneEmailWebsite()
 
 function Education()
 {
+    Appender("resume", "h2", "Education");
+    Appender("resume", "hr", "");
     var educations = document.getElementsByClassName("education");
     //educations.forEach(MyEducation);
     for(var i = 0; i < educations.length; i++)
@@ -84,25 +86,29 @@ function Education()
 
 function MyEducation(index)
 {
-    Appender("resume", "h2", "Education");
-    Appender("resume", "hr", "");
-    //School Name
-    Appender("resume", "h3", document.getElementById("school" + index).value);
-    //City, State
-    Appender("resume", "span", document.getElementById("city" + index).value);
-    //Grad Date
-    Appender("resume", "span", ("    " + document.getElementById("date" + index).value));
+    if(document.getElementById("school" + index).value != "") //Checks if field is filled in
+    {
+        //School Name
+        Appender("resume", "h3", document.getElementById("school" + index).value);
+        //City, State
+        Appender("resume", "span", document.getElementById("city" + index).value);
+        //Grad Date
+        Appender("resume", "span", ("    " + document.getElementById("date" + index).value));
 
-    Appender("resume", "br", "");
-    //Degree
-    Appender("resume", "span", document.getElementById("degree" + index).value);
-    //Major
-    Appender("resume", "span", ("    " + document.getElementById("major" + index).value));
+        Appender("resume", "br", "");
+        //Degree
+        Appender("resume", "span", document.getElementById("degree" + index).value);
+        //Major
+        Appender("resume", "span", ("    " + document.getElementById("major" + index).value)); 
+    }
+    
 }
 
     function Jobs()
     {
-        var educations = document.getElementsByClassName("education");
+        Appender("resume", "h2", "Job Experience");
+        Appender("resume", "hr", "");
+        var educations = document.getElementsByClassName("jobForm");
         //educations.forEach(MyEducation);
         for(var i = 0; i < educations.length; i++)
         {
@@ -112,19 +118,21 @@ function MyEducation(index)
 
     function MyJobs(index)
     {
-        Appender("resume", "h2", "Job Experience");
-        Appender("resume", "hr", "");
-        //Company
-        Appender("resume", "h3", document.getElementById("company" + index).value);
-        //Job
-        Appender("resume", "span", document.getElementById("job" + index).value);
-        //Date From
-        Appender("resume", "span", ("    " + document.getElementById("dateFrom" + index).value));
-        //Date To
-        Appender("resume", "span", (", " + document.getElementById("dateTo" + index).value));
-        Appender("resume", "br", "");
-        //Description
-        Appender("resume", "span", (document.getElementById("description" + index).value));
+        if(document.getElementById("company" + index).value != "")
+        {
+            //Company
+            Appender("resume", "h3", document.getElementById("company" + index).value);
+            //Job
+            Appender("resume", "span", document.getElementById("job" + index).value);
+            //Date From
+            Appender("resume", "span", ("    " + document.getElementById("dateFrom" + index).value));
+            //Date To
+            Appender("resume", "span", (", " + document.getElementById("dateTo" + index).value));
+            Appender("resume", "br", "");
+            //Description
+            Appender("resume", "span", (document.getElementById("description" + index).value));  
+        }
+        
     }
 
 function Appender(ID, tag, text)
